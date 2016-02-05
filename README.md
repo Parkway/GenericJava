@@ -1,0 +1,2 @@
+# GenericJava
+Random practice.
