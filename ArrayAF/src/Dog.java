@@ -1,33 +1,25 @@
 /**
  * Created by Lance on 1/29/2016.
  */
-class Dog {
+public class Dog {
 
     String name;
 
     public static void main(String[] args) {
         Dog dog1 = new Dog();
         dog1.bark();
-        dog1.name = "Spot";
+        dog1.name = "Spot"; // why does this exist?
 
         Dog[] myDogs = new Dog[3];
 
-        myDogs[0] = new Dog();
-        myDogs[1] = new Dog();
-        myDogs[2] = new Dog();
+        for (int y=0; y<3; y++ ) myDogs[y] = new Dog(); //shorter
 
         myDogs[0].name = "Moshi";
         myDogs[1].name = "Levi";
 
-        System.out.println("Last dog's name is ");
-        System.out.println(myDogs[2].name);
+        System.out.println("Last dog's name is " + myDogs[2].name);  // sup with the two print lines?
 
-        int x = 0;
-        while(x < myDogs.length) {
-            myDogs[x].bark();
-            x = x + 1;
-
-        }
+        for (Dog x: myDogs) x.bark(); // shorter
     }
 
     public void bark() {
