@@ -1,6 +1,3 @@
-/**
- * Created by Lance on 1/28/2016.
- */
 public class GuessGame {
     Player p1;
     Player p2;
@@ -11,9 +8,9 @@ public class GuessGame {
         p2 = new Player();
         p3 = new Player();
 
-        int guessp1 = 0;
-        int guessp2 = 0;
-        int guessp3 = 0;
+        int guessp1;
+        int guessp2;
+        int guessp3;
 
         boolean p1isRight = false;
         boolean p2isRight = false;
@@ -24,6 +21,7 @@ public class GuessGame {
 
         while(true) {
             System.out.println("Number to guess is " + targetNumber);
+            // I love that I can type Sys then just . . . to ready a println.
 
             p1.guess();
             p2.guess();
