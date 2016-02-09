@@ -5,13 +5,8 @@ public class Main {
     public static void main(String[] args) {
 	System.out.println("What would you like to do?");
         Scanner scn = new Scanner(System.in);
-        String A = "Addition";
-        String S = "Subtraction";
-        String M = "Multiplication";
-        String D = "Division";
-        while(true) {
             String userinput = scn.nextLine();
-            if (userinput.equals(A)) {
+            if (userinput.equals("Addition")) {
                 System.out.println("Lets do some addition!");
                 System.out.println(" ");
                 System.out.println("First number? ");
@@ -21,7 +16,7 @@ public class Main {
                 Double num3 = num1 + num2;
                 System.out.println(" ");
                 System.out.println("The answer is " + num3);
-            } else if (userinput.equals(S)) {
+            } else if (userinput.equals("Subtraction")) {
                 System.out.println("Lets do some subtraction!");
                 System.out.println(" ");
                 System.out.println("First number? ");
@@ -31,7 +26,7 @@ public class Main {
                 Double num3 = num1 - num2;
                 System.out.println(" ");
                 System.out.println("The answer is " + num3);
-            } else if (userinput.equals(M)) {
+            } else if (userinput.equals("Multiplication")) {
                 System.out.println("Lets do some multiplication!");
                 System.out.println(" ");
                 System.out.println("First number? ");
@@ -41,7 +36,7 @@ public class Main {
                 Double num3 = num1 * num2;
                 System.out.println(" ");
                 System.out.println("The answer is " + num3);
-            } else if (userinput.equals(D)) {
+            } else if (userinput.equals("Division")) {
                 System.out.println(" ");
                 System.out.println("First number? ");
                 Double num1 = scn.nextDouble();
@@ -50,24 +45,19 @@ public class Main {
                 Double num3 = num1 / num2;
                 System.out.println(" ");
                 System.out.println("The answer is " + num3);
-            } else
-                continue;
+            }
             System.out.println("Do you want to do another?");
             Scanner sxm = new Scanner(System.in);
             String option = sxm.nextLine();
             if(option.equals("Yes")) {
                System.out.println("Well I don't know how to do that yet, so fuck off.");
-                return;
             } else if(option.equals("No")) {
                 System.out.println("Have a nice day.");
-                return;
             } else {
-                System.out.println("Don't be retarded and type Yes or No");
-                return;
+                System.out.println("That was a yes or no question. *rage quite*");
             }
         }
 
 
 
     }
-}
