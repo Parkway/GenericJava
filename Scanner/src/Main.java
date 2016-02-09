@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Inputs");
+        System.out.println("First number: ");
         Scanner scn = new Scanner (System.in);
-        scn.nextLine();
-        String stuff = scn.nextLine();
-        System.out.println(stuff);
+        int a1 = scn.nextInt();
+        System.out.println("Second number: ");
+        int a2 = scn.nextInt();
+        int a3 = a1 + a2;
+        System.out.println(a3);
     }
 }
