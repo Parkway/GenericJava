@@ -19,7 +19,7 @@ public class Main {
             Double num2 = scn.nextDouble();
             Double num3 = num1 + num2;
             System.out.println(" ");
-            System.out.println("The answer is" + num3);
+            System.out.println("The answer is " + num3);
         } else if (userinput.equals(S)){
             System.out.println("Lets do some subtraction!");
             System.out.println(" ");
@@ -29,7 +29,7 @@ public class Main {
             Double num2 = scn.nextDouble();
             Double num3 = num1 - num2;
             System.out.println(" ");
-            System.out.println("The answer is" + num3);
+            System.out.println("The answer is " + num3);
         } else if (userinput.equals(M)) {
             System.out.println("Lets do some multiplication!");
             System.out.println(" ");
@@ -39,7 +39,7 @@ public class Main {
             Double num2 = scn.nextDouble();
             Double num3 = num1 * num2;
             System.out.println(" ");
-            System.out.println("The answer is" + num3);
+            System.out.println("The answer is " + num3);
         } else if (userinput.equals(D)) {
             System.out.println(" ");
             System.out.println("First number? ");
@@ -48,7 +48,7 @@ public class Main {
             Double num2 = scn.nextDouble();
             Double num3 = num1 / num2;
             System.out.println(" ");
-            System.out.println("The answer is" + num3);
+            System.out.println("The answer is " + num3);
         }
     }
 }
