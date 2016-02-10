@@ -9,7 +9,7 @@ public class Main {
     }
 
     public static void main(Scanner scn){
-        int number = 50;
+        int number = 5;
         String myChar = "\n8==D~";
         String userinput = scn.nextLine().toLowerCase();
         if (userinput.equals("addition")) {
@@ -58,7 +58,7 @@ public class Main {
             print("\n" + greet);
             Scanner newinput = new Scanner(System.in);
             main(newinput);
-        } else if(option.equals("no")) {
+        } else if(option.equals("no")||(option.equals("nope"))) {
             print("Have a nice day.");
         } else {
             print("That was a yes or no question. *rage quit*");
