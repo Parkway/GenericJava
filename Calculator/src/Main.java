@@ -12,56 +12,75 @@ public class Main {
         int number = 50;
         String myChar = "\n8==D~";
         String userinput = scn.nextLine().toLowerCase();
-        if (userinput.equals("addition")) {
-            print("Lets do some addition!\n");
-            print("First number? ");
-            Double num1 = scn.nextDouble();
-            print("Second number? ");
-            Double num2 = scn.nextDouble();
-            Double num3 = num1 + num2;
-            print("\nThe answer is " + num3);
-        } else if (userinput.equals("subtraction")) {
-            print("Lets do some subtraction!\n");
-            print("First number? ");
-            Double num1 = scn.nextDouble();
-            print("Second number? ");
-            Double num2 = scn.nextDouble();
-            Double num3 = num1 - num2;
-            print("\nThe answer is " + num3);
-        } else if (userinput.equals("dicks")) {
-            print("What is your name?");
-            String num4 = scn.nextLine();
-            while(number >= 0) {
-                print(num4 + " loves "+ myChar);
-                number--; }
-        } else if (userinput.equals("multiplication")) {
-            print("Lets do some multiplication!\n");
-            print("First number? ");
-            Double num1 = scn.nextDouble();
-            print("Second number? ");
-            Double num2 = scn.nextDouble();
-            Double num3 = num1 * num2;
-            print("\nThe answer is " + num3);
-        } else if (userinput.equals("division")) {
-            print("\nFirst number? ");
-            Double num1 = scn.nextDouble();
-            print("Second number? ");
-            Double num2 = scn.nextDouble();
-            Double num3 = num1 / num2;
-            print("\nThe answer is " + num3);
+        switch (userinput) {
+            case "addition": {
+                print("Lets do some addition!\n");
+                print("First number? ");
+                Double num1 = scn.nextDouble();
+                print("Second number? ");
+                Double num2 = scn.nextDouble();
+                Double num3 = num1 + num2;
+                print("\nThe answer is " + num3);
+                break;
+            }
+            case "subtraction": {
+                print("Lets do some subtraction!\n");
+                print("First number? ");
+                Double num1 = scn.nextDouble();
+                print("Second number? ");
+                Double num2 = scn.nextDouble();
+                Double num3 = num1 - num2;
+                print("\nThe answer is " + num3);
+                break;
+            }
+            case "dicks":
+                print("What is your name?");
+                String num4 = scn.nextLine();
+                while (number >= 0) {
+                    print(num4 + " loves " + myChar);
+                    number--;
+                }
+                break;
+            case "multiplication": {
+                print("Lets do some multiplication!\n");
+                print("First number? ");
+                Double num1 = scn.nextDouble();
+                print("Second number? ");
+                Double num2 = scn.nextDouble();
+                Double num3 = num1 * num2;
+                print("\nThe answer is " + num3);
+                break;
+            }
+            case "division": {
+                print("\nFirst number? ");
+                Double num1 = scn.nextDouble();
+                print("Second number? ");
+                Double num2 = scn.nextDouble();
+                Double num3 = num1 / num2;
+                print("\nThe answer is " + num3);
+                break;
+            }
+            default:
+                print("Not a valid option");
+                break;
         }
-        else print("Not a valid option");
         print("Do you want to do another?");
         Scanner sxm = new Scanner(System.in);
         String option = sxm.nextLine().toLowerCase();
-        if(option.equals("yes")) {
-            print("\n" + greet);
-            Scanner newinput = new Scanner(System.in);
-            main(newinput);
-        } else if(option.equals("no")) {
-            print("Have a nice day.");
-        } else {
-            print("That was a yes or no question. *rage quit*");
+        switch (option) {
+            case "yes":
+            case "yeah":
+                print("\n" + greet);
+                Scanner newinput = new Scanner(System.in);
+                main(newinput);
+                break;
+            case "no":
+            case "nope":
+                print("Have a nice day.");
+                break;
+            default:
+                print("That was a yes or no question. *rage quit*");
+                break;
         }
     }
 
