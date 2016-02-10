@@ -8,7 +8,9 @@ public class Main {
         System.out.println(s);
     }
 
-    public static void theRealMVP(Scanner scn){
+    public static void main(Scanner scn){
+        int number = 50;
+        String myChar = "\n8==D~";
         String userinput = scn.nextLine().toLowerCase();
         if (userinput.equals("addition")) {
             print("Lets do some addition!\n");
@@ -26,6 +28,12 @@ public class Main {
             Double num2 = scn.nextDouble();
             Double num3 = num1 - num2;
             print("\nThe answer is " + num3);
+        } else if (userinput.equals("dicks")) {
+            print("What is your name?");
+            String num4 = scn.nextLine();
+            while(number >= 0) {
+                print(num4 + " loves "+ myChar);
+                number--; }
         } else if (userinput.equals("multiplication")) {
             print("Lets do some multiplication!\n");
             print("First number? ");
@@ -49,7 +57,7 @@ public class Main {
         if(option.equals("yes")) {
             print("\n" + greet);
             Scanner newinput = new Scanner(System.in);
-            theRealMVP(newinput);
+            main(newinput);
         } else if(option.equals("no")) {
             print("Have a nice day.");
         } else {
@@ -61,8 +69,7 @@ public class Main {
 
         print(greet);
         Scanner scn = new Scanner(System.in);
-        theRealMVP(scn);
-        print("Do you want to do another?");
+        main(scn);
     }
 
 }
