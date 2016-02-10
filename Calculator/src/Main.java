@@ -16,7 +16,8 @@ public class Main {
         String myChar = "\n8==D~";
         String userinput = scn.nextLine().toLowerCase();
         switch (userinput) {
-            case "addition":case "1": {
+            case "addition":
+            case "1": {
                 print("Lets do some addition!\n");
                 print("First number? ");
                 Double num1 = scn.nextDouble();
@@ -26,7 +27,8 @@ public class Main {
                 print("\nThe answer is " + num3);
                 break;
             }
-            case "subtraction":case "2": {
+            case "subtraction":
+            case "2": {
                 print("Lets do some subtraction!\n");
                 print("First number? ");
                 Double num1 = scn.nextDouble();
@@ -44,7 +46,8 @@ public class Main {
                     number--;
                 }
                 break;
-            case "multiplication":case "3": {
+            case "multiplication":
+            case "3": {
                 print("Lets do some multiplication!\n");
                 print("First number? ");
                 Double num1 = scn.nextDouble();
@@ -54,7 +57,8 @@ public class Main {
                 print("\nThe answer is " + num3);
                 break;
             }
-            case "division":case "4": {
+            case "division":
+            case "4": {
                 print("\nFirst number? ");
                 Double num1 = scn.nextDouble();
                 print("Second number? ");
