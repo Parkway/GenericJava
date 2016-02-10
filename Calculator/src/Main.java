@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static String greet = "What would you like to do? Available options are: \nAddition, Subtraction, Multiplication, Division";
+    public static String greet = "What would you like to do? Available options are: \nAddition[1], " +
+            "\nSubtraction[2], " +
+            "\nMultiplication[3], " +
+            "\nDivision[4]";
 
     public static void print(String s){
         System.out.println(s);
@@ -13,7 +16,7 @@ public class Main {
         String myChar = "\n8==D~";
         String userinput = scn.nextLine().toLowerCase();
         switch (userinput) {
-            case "addition": {
+            case "addition":case "1": {
                 print("Lets do some addition!\n");
                 print("First number? ");
                 Double num1 = scn.nextDouble();
@@ -23,7 +26,7 @@ public class Main {
                 print("\nThe answer is " + num3);
                 break;
             }
-            case "subtraction": {
+            case "subtraction":case "2": {
                 print("Lets do some subtraction!\n");
                 print("First number? ");
                 Double num1 = scn.nextDouble();
@@ -33,7 +36,7 @@ public class Main {
                 print("\nThe answer is " + num3);
                 break;
             }
-            case "dicks":
+            case "69":
                 print("What is your name?");
                 String num4 = scn.nextLine();
                 while (number >= 0) {
@@ -41,7 +44,7 @@ public class Main {
                     number--;
                 }
                 break;
-            case "multiplication": {
+            case "multiplication":case "3": {
                 print("Lets do some multiplication!\n");
                 print("First number? ");
                 Double num1 = scn.nextDouble();
@@ -51,7 +54,7 @@ public class Main {
                 print("\nThe answer is " + num3);
                 break;
             }
-            case "division": {
+            case "division":case "4": {
                 print("\nFirst number? ");
                 Double num1 = scn.nextDouble();
                 print("Second number? ");
@@ -83,12 +86,10 @@ public class Main {
                 break;
         }
     }
-
     public static void main(String[] args) {
 
         print(greet);
         Scanner scn = new Scanner(System.in);
         main(scn);
     }
-
 }
