@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(Scanner scn){
         int number = 5;
-        String myChar = "\n8==D~";
+        String myChar = "8==D~";
         String userinput = scn.nextLine().toLowerCase();
         switch (userinput) {
             case "addition":
