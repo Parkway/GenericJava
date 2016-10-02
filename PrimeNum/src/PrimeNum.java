@@ -15,8 +15,13 @@ public class PrimeNum {
             } else if (inputNum % 3 == 0) {
                 prime = false;
                 System.out.println(prime);
-            }
-            else if (inputNum == -1) {
+            } else if (inputNum % 5 == 0) {
+                prime = false;
+                System.out.println(prime);
+            } else if (inputNum % 7 == 0) {
+                prime = false;
+                System.out.println(prime);
+            } else if (inputNum == -1) {
                 break;
             } else {
                 prime = true;
