@@ -2,18 +2,16 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static String greet = "What would you like to do? Available options are: \nAddition[1], " +
+    private static String greet = "What would you like to do? Available options are: \nAddition[1], " +
             "\nSubtraction[2], " +
             "\nMultiplication[3], " +
             "\nDivision[4]";
 
-    public static void print(String s){
+    private static void print(String s) {
         System.out.println(s);
     }
 
-    public static void main(Scanner scn){
-        int number = 5;
-        String myChar = "8==D~";
+    private static void main(Scanner scn){
         String userinput = scn.nextLine().toLowerCase();
         switch (userinput) {
             case "addition":
@@ -38,14 +36,6 @@ public class Main {
                 print("\nThe answer is " + num3);
                 break;
             }
-            case "69":
-                print("What is your name?");
-                String num4 = scn.nextLine();
-                while (number >= 0) {
-                    print(num4 + " loves " + myChar);
-                    number--;
-                }
-                break;
             case "multiplication":
             case "3": {
                 print("Lets do some multiplication!\n");

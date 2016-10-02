@@ -1,6 +1,3 @@
-/**
- * Created by Lance on 1/28/2016.
- */
 public class MovieTestDrive {
         public static void main(String[] args){
             Movie one = new Movie();
