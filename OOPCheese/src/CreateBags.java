@@ -18,9 +18,6 @@ public class CreateBags {
     }
     private static void displayBags(BagOfCheese bag) {
         JOptionPane.showMessageDialog(null,
-                bag.kind + ", " +
-                        bag.weight + ", " +
-                        bag.daysAged + ", " +
-                        bag.isDomestic);
+                bag.kind + ", " + bag.weight + ", " + bag.daysAged + ", " + bag.isDomestic);
     }
 }
