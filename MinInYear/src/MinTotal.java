@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class MinTotal {
+
+    public static void main(String[] Strings) {
+        Scanner scn = new Scanner(System.in);
+        double minutesInYear = 60 * 24 * 365;
+        System.out.print("Input the number of minutes: ");
+        double min = scn.nextDouble();
+        long years = (long) (min / minutesInYear);
+        int days = (int) (min / 60 / 24) % 365;
+
+        System.out.println((int) min + " minutes is approximately " + years + " years and " + days + " days");
+    }
+}
