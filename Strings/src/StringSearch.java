@@ -6,10 +6,9 @@ public class StringSearch {
         System.out.println("This program lets you search for a string within a phrase.\n");
 
         System.out.print("Please enter a phrase: ");
-        String phrase = scn.nextLine();
+        String phrase = scn.nextLine().toLowerCase();
         System.out.print("What would you like to search the phrase for? ");
-        String search = scn.nextLine();
-        int phraseLength = phrase.length() - 1;
+        String search = scn.nextLine().toLowerCase();
         if (phrase.contains(search)) {
             System.out.println("Your program does contain '" + search + "'!\n");
         } else {
