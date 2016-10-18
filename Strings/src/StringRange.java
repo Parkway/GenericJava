@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class StringRange {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        System.out.println("This program allows you to retrieve a portion of the entered text by entering a range of two numbers.\n");
         System.out.print("Please enter a phrase: ");
         String phrase = scn.nextLine();
         int phraseLength = phrase.length();
