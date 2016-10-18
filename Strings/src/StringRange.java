@@ -9,6 +9,7 @@ public class StringRange {
         System.out.println("Now, enter two numbers; both less than the total number\n" +
                 "of characters in your phrase, at " + phraseLength + " characters");
         int num1 = scn.nextInt();
+        num1 = num1 - 1;
         int num2 = scn.nextInt();
         int max = Math.max(num1, num2);
         int min = Math.min(num1, num2);
