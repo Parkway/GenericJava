@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Replacement {
+public class StringReplace {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.println("This program allows you to replace input with other input.\n" +

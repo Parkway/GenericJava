@@ -22,7 +22,8 @@ public class StringRange {
             }
             System.out.print("'");
         } catch (StringIndexOutOfBoundsException SIOOBE) {
-            System.out.println("One of the numbers is higher than " + phraseLength + ". How did you fuck that up?");
+            System.out.println("One of the numbers is higher than " + phraseLength + "." +
+                    "\nPlease try again.");
         }
     }
 }
