@@ -7,7 +7,7 @@ public class Reiteration {
         int num = scn.nextInt();
         displaySharp(num);
     }
-    public static void displaySharp(int num) {
+    private static void displaySharp(int num) {
         while (num > 0) {
             System.out.print("#");
             num--;
