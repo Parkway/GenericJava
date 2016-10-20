@@ -19,7 +19,7 @@ public class ZeroCounter {
         int result;
 
         if (num < 0) {
-            num = num*(-num);
+            num = -num;
             zeroCheck(num);
         }
         if (num == 0) {
