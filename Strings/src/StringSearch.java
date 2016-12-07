@@ -10,7 +10,7 @@ public class StringSearch {
         System.out.print("What would you like to search the phrase for? ");
         String search = scn.nextLine().toLowerCase();
         if (phrase.contains(search)) {
-            System.out.println("Your program does contain '" + search + "'!\n");
+            System.out.println("Your program contains at least one instance of '" + search + "'!\n");
         } else {
             System.out.println("Your program does not contain '" + search + "'.");
         }

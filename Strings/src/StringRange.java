@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class StringRange {
@@ -24,6 +25,8 @@ public class StringRange {
         } catch (StringIndexOutOfBoundsException SIOOBE) {
             System.out.println("One of the numbers is higher than " + phraseLength + "." +
                     "\nPlease try again.");
+        } catch (InputMismatchException IME) {
+            System.out.println("Okay, so that wasn't even a number. Prick.");
         }
     }
 }
