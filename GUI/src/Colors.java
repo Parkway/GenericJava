@@ -62,3 +62,4 @@ public class Colors extends JFrame {
         Colors GUI = new Colors();
     }
 }
+//Testing
