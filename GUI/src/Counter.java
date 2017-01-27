@@ -9,12 +9,19 @@ import java.awt.event.ActionListener;
 
 public class Counter extends JFrame {
     //TODO: Literally everything. This was just to test a default file template (Yeah at the top, that.)
-    JPanel Pnl = new JPanel(null);
-    JButton adder = new JButton("Plus One");
-    JButton miner = new JButton("Minus One");
-    JLabel Lbl = new JLabel("0");
 
-    int clickCount = 0;
+    private int clickCount = 0;
+    private int totalClicks = 0;
+    private int zero = 0;
+    private String totalCount = "Total clicks: ";
+    private String counterIndex = "Counter Index: ";
+
+    private JPanel Pnl = new JPanel(null);
+    private JButton adder = new JButton("Plus One");
+    private JButton miner = new JButton("Minus One");
+    private JButton reset = new JButton("Reset");
+    private JLabel Lbl = new JLabel(counterIndex);
+    private JLabel total = new JLabel(totalCount);
 
     private Counter() {
         super("Clicker Counter");
@@ -24,36 +31,49 @@ public class Counter extends JFrame {
         Pnl.add(Lbl, BorderLayout.CENTER);
         Pnl.add(adder, BorderLayout.NORTH);
         Pnl.add(miner, BorderLayout.SOUTH);
+        Pnl.add(total, BorderLayout.CENTER);
+        Pnl.add(reset, BorderLayout.SOUTH);
         Pnl.setBackground(Color.white);
 
         Lbl.setSize(50,50);
-        Lbl.setBounds(120,110,50,10);
+        Lbl.setBounds(80,140,150,10);
+        Lbl.setText(counterIndex + zero);
+
+        total.setSize(50,50);
+        total.setBounds(80,90,150,10);
+        total.setText(totalCount + zero);
 
         adder.setFocusable(false);
-        adder.setSize(250, 20);
-        adder.setBackground(Color.WHITE);
+        adder.setBackground(Color.green);
         adder.setBounds(15,10,225,20);
 
         miner.setFocusable(false);
-        miner.setSize(250,20);
-        miner.setBackground(Color.WHITE);
-        miner.setBounds(15,210,225,20);
+        miner.setBackground(Color.red);
+        miner.setBounds(15,180,225,20);
 
-        adder.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        reset.setFocusable(false);
+        reset.setBackground(Color.white);
+        reset.setBounds(15, 200,225,20);
+
+        adder.addActionListener((ActionEvent e) -> {
                 clickCount++;
+                totalClicks++;
                 String newClick = Integer.toString(clickCount);
-                Lbl.setText(newClick);
-            }
+                Lbl.setText(counterIndex + newClick);
+                total.setText(totalCount + totalClicks);
         });
-        miner.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        miner.addActionListener((ActionEvent e) -> {
                 clickCount--;
+                totalClicks++;
                 String newClick = Integer.toString(clickCount);
-                Lbl.setText(newClick);
-            }
+                Lbl.setText(counterIndex + newClick);
+                total.setText(totalCount + totalClicks);
+        });
+        reset.addActionListener((ActionEvent e) -> {
+                clickCount = 0;
+                totalClicks = 0;
+                Lbl.setText(counterIndex + zero);
+                total.setText(totalCount + zero);
         });
 
         setVisible(true);
