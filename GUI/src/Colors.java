@@ -6,19 +6,24 @@ public class Colors extends JFrame {
     JPanel Frame = new JPanel();
 
     JRadioButton JRB1 = new JRadioButton("Red");
-    JRadioButton JRB2 = new JRadioButton("Pink");
+    JRadioButton JRB2 = new JRadioButton("Green");
     JRadioButton JRB3 = new JRadioButton("Blue");
 
     ButtonGroup Colors = new ButtonGroup();
 
     private Colors() {
-        super("Test GUI");
+        super("Color Switcher");
         setSize(500,250);
         add(Frame);
+
+        Frame.add(JRB1);
+        Frame.add(JRB2);
+        Frame.add(JRB3);
 
         Colors.add(JRB1);
         Colors.add(JRB2);
         Colors.add(JRB3);
+
         JRB1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -31,10 +36,10 @@ public class Colors extends JFrame {
         JRB2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JRB1.setBackground(Color.PINK);
-                JRB2.setBackground(Color.PINK);
-                JRB3.setBackground(Color.PINK);
-                Frame.setBackground(Color.PINK);
+                JRB1.setBackground(Color.GREEN);
+                JRB2.setBackground(Color.GREEN);
+                JRB3.setBackground(Color.GREEN);
+                Frame.setBackground(Color.GREEN);
 
             }
         });
@@ -47,13 +52,6 @@ public class Colors extends JFrame {
                 Frame.setBackground(Color.BLUE);
             }
         });
-
-
-        Frame.add(JRB1);
-        Frame.add(JRB2);
-        Frame.add(JRB3);
-        Frame.add(JRB1, BorderLayout.SOUTH);
-        Frame.add(JRB2, BorderLayout.SOUTH);
 
         setVisible(true);
     }
