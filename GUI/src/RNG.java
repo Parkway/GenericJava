@@ -19,6 +19,7 @@ public class RNG extends JFrame {
         JF.add(B1);
         JF.add(JTA);
         JF.getContentPane().setBackground(Color.blue);
+        JF.setLocationRelativeTo(null);
 
         JTA.setEditable(false);
         JTA.setFocusable(false);
