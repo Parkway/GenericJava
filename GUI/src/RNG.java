@@ -6,6 +6,9 @@ import java.util.Random;
 public class RNG extends JFrame {
     public static void main(String[] args) {
         String minRange = JOptionPane.showInputDialog("Lowest number in the range.");
+        if (minRange.equals("")) {
+            //Code here
+        }
         String maxRange = JOptionPane.showInputDialog("Highest number in the range.");
         Random rand = new Random();
 
@@ -19,7 +22,7 @@ public class RNG extends JFrame {
         JF.add(B1);
         JF.add(JTA);
         JF.getContentPane().setBackground(Color.blue);
-        JF.setLocationRelativeTo(null);
+        JF.setLocationRelativeTo(null); //Spawn in center, not upper left!
 
         JTA.setEditable(false);
         JTA.setFocusable(false);
