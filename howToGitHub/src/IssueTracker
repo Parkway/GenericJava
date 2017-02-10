@@ -1,3 +1,15 @@
+/*************************************************************
+ * This is a file I will keep updated with any and all
+ * GitHub related issues, so in the future if I (or anyone
+ * else) need to check back here to see the fix, I can do so.
+ * Because my IDE of choice is IntelliJ, I will most likely
+ * be fixing and diagnosing problems I have with IntelliJ
+ * and posting them here.
+ *************************************************************/
+
+
+
+
 /*
  * So, the issue I was having is that whenever I clone a repo
  * from GitHub, the only files that I could access from IntelliJ
