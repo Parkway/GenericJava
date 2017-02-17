@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -67,42 +66,38 @@ public class Counter extends JFrame {
 
         /* Today, I learned about the magic of Lambda expressions. They're my new best friend.
            They turn this hideous conglomeration (once known as the Dixie Chicks):
-
             * adder.addActionListener(new ActionListener() {
             * @Override
             * public void actionPerformed(ActionEvent AE) {
             *
             * }
             * });
-
            Into this gorgeous succinct piece of art:
-
             * adder.addActionListener((ActionEvent AE) -> {
             *
             * });
-
            Moral of the story they make me happy.
          */
 
         adder.addActionListener((ActionEvent AE) -> { //Now this here is some facking magic. Lambda expressions are the bomb.
-                clickCount++;
-                totalClicks++;
-                String newClick = Integer.toString(clickCount); //Converts the clickCount Int to a String - necessary.
-                Lbl.setText(counterIndex + newClick);
-                total.setText(totalCount + totalClicks);
+            clickCount++;
+            totalClicks++;
+            String newClick = Integer.toString(clickCount); //Converts the clickCount Int to a String - necessary.
+            Lbl.setText(counterIndex + newClick);
+            total.setText(totalCount + totalClicks);
         });
         miner.addActionListener((ActionEvent AE) -> {
-                clickCount--;
-                totalClicks++;
-                String newClick = Integer.toString(clickCount);
-                Lbl.setText(counterIndex + newClick);
-                total.setText(totalCount + totalClicks);
+            clickCount--;
+            totalClicks++;
+            String newClick = Integer.toString(clickCount);
+            Lbl.setText(counterIndex + newClick);
+            total.setText(totalCount + totalClicks);
         });
         reset.addActionListener((ActionEvent AE) -> {
-                clickCount = zero;
-                totalClicks = zero; //Else it keeps counting.
-                Lbl.setText(counterIndex + zero);
-                total.setText(totalCount + zero);
+            clickCount = zero;
+            totalClicks = zero; //Else it keeps counting.
+            Lbl.setText(counterIndex + zero);
+            total.setText(totalCount + zero);
         });
 
         setVisible(true); //Invisible GUI == Bad GUI.

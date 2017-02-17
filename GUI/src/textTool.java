@@ -48,43 +48,24 @@ public class textTool extends JFrame {
         JTA.setFont(new Font("Ubuntu", Font.PLAIN, 20));
 
 
-        JRB1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JTA.setForeground(Color.red);
-            }
+        JRB1.addActionListener((ActionEvent AE) -> {
+           JTA.setForeground(Color.red);
         });
-        JRB2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        JRB2.addActionListener((ActionEvent e) -> {
                 JTA.setForeground(Color.blue);
-            }
         });
-        JRB3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        JRB3.addActionListener((ActionEvent AE) -> {
                 JTA.setForeground(Color.black);
-            }
         });
-        JRB4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        JRB4.addActionListener((ActionEvent) ->  {
                 JTA.setFont(new Font("Ubuntu", Font.PLAIN, 20));
-            }
         });
-        JRB5.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JTA.setFont(new Font("Ubuntu", Font.BOLD, 20));
-            }
+        JRB5.addActionListener((ActionEvent AE) -> {
+            JTA.setFont(new Font("Ubuntu", Font.BOLD, 20));
         });
-        JRB6.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        JRB6.addActionListener((ActionEvent AE) -> {
                 JTA.setFont(new Font("Ubuntu", Font.ITALIC, 20));
-            }
         });
-
         setVisible(true);
     }
     public static void main(String[] args) {
