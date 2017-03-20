@@ -28,7 +28,6 @@ public class Counter extends JFrame {
 
     private Counter() {
         super("Clicker Counter");
-        setSize(250,250);
 
         //Adding all elements to the JPanel
 
