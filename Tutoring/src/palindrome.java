@@ -8,12 +8,12 @@ public class palindrome {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter a phrase, I will determine if " +
                 "\nit is a palindrome or not.");
-        String phrase = scn.nextLine();
+        String phrase = scn.nextLine().toLowerCase();
         String reversedPhrase = new StringBuffer(phrase).reverse().toString();
         if (phrase.equals(reversedPhrase)) {
             System.out.println("Congrats, " + phrase + " is a palindrome!");
         } else {
-            System.out.println("Unfortunately, " + phrase + " is not a palindrome.");
+            System.out.println("Unfortunately, \"" + phrase + "\" is not a palindrome.");
         }
     }
 }
