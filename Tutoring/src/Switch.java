@@ -10,13 +10,17 @@ public class Switch {
         System.out.println("Are you a college student? Yes/No");
         String student = scn.nextLine();
 
+        //switch (input variable)
         switch(student) {
+            //cases for each option
             case "Yes" :
                 System.out.println("Yes, you are a college student.");
+                //Close switch with break, or will continue.
                 break;
             case "No" :
                 System.out.println("No, you are not a college student.");
                 break;
+            //Final else in case no matching input
             default:
                 System.out.println("Try again, and please enter 'Yes' or 'No'");
         }

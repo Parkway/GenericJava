@@ -1,5 +1,11 @@
 /*****************************************
  * Created by Lance Douglas on 3/17/2017
+ *
+ * This program goes over some of the
+ * different escape characters in java.
+ * \n for a newline.
+ * \t for a tab.
+ * \" for a quotation mark.
  *****************************************/
 public class escapeChars {
     public static void main(String[] args) {

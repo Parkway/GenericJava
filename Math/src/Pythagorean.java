@@ -5,13 +5,16 @@ import java.util.Scanner;
  ***************************************************/
 public class Pythagorean {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
 
         System.out.println("This program helps determine\n" +
                 "the third side of a triangle. Remember:\n" +
-                "a2 + b2 = c2.\n" +
-                "Which side do you need to know? a, b, or c?\n" +
-                "C is always the longest.");
+                "a2 + b2 = c2, and C is always the longest.");
+        math();
+    }
+    private static void math() {
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("Which side do you need to know? a, b, or c?");
         String side = scn.nextLine().toLowerCase();
         if (side.equals("a")) {
             System.out.print("b: ");
@@ -49,6 +52,9 @@ public class Pythagorean {
             double c = Math.sqrt(c2);
 
             System.out.println("Side 'c' is " + c);
+        } else {
+            System.out.println("That's not an option. a, b, or c only.");
+            math();
         }
     }
 }
