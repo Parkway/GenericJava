@@ -29,6 +29,10 @@ public class Factorial {
             }
         } catch (NullPointerException NPE) {
             System.exit(1);
+        } catch (NumberFormatException NFE) {
+            JOptionPane.showMessageDialog(null,
+                    "Number too large.");
+            main(args);
         }
     }
 }
