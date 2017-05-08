@@ -6,7 +6,7 @@ import java.nio.CharBuffer;
  * Created by Lance Douglas on 5/5/2017 - Buffers
  *
  * By design, this program highlights the usage of buffers. Basically,
- * I created a small buffer with a limit of ten(10) chars, and then
+ * I created a small buffer with a limit of 10 chars, and then
  * prompt the user to enter a string. From here, if the String is
  * lengthier than the buffer limit, catch the overflow in a secondary
  * buffer, and explain the concept. If the String is less than 10,
@@ -22,7 +22,12 @@ public class Buffer {
                 "the string is less than ten, equal to ten, or higher than ten. ";
 
         JOptionPane.showMessageDialog(null,
-                "<html><body><p style='width: 250px;'>" + starter + "</p></body></html>");
+                "<html><body><p style='width: 250px;'>" + starter + "</p></body></html>",
+                "Hello!", JOptionPane.PLAIN_MESSAGE);
+        //Start input method
+        input();
+    }
+    private static void input() {
         //Create buffer with of 10.
         int buffer = 10;
 
@@ -30,7 +35,7 @@ public class Buffer {
         String str = JOptionPane.showInputDialog(null,
                 "Enter a string:");
         if (str.equals("")) {
-            main(args);
+            input();
         }
         try {
             //Create charBuffer, allocate memory to the buffer variable 10
@@ -107,6 +112,11 @@ public class Buffer {
         JOptionPane.showMessageDialog(null,
                 "<html><body><p style='width: 250px;'>" + finalStr + "</p></body></html>");
 
+        total(str);
+    }
+    private static void total(String str) {
+        JOptionPane.showMessageDialog(null,
+                "The original string was: " + str, "Original String", JOptionPane.PLAIN_MESSAGE);
         //Close the program.
         System.exit(1337);
     }
