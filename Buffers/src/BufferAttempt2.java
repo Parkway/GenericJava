@@ -66,7 +66,8 @@ public class BufferAttempt2 {
         //display buffer before crash, string that caused crash, and length of crasher
         JOptionPane.showMessageDialog(null,
                 "Before overflowing, the buffer read \"" + charBuff +
-                "\"\nOverflow String: " + cBstr + "\nTotal String Length: " + strLen);
+                        "\"\nOverflow String: " + cBstr +
+                        "\nTotal String Length: " + strLen);
         System.exit(13);
     }
     private static void fin(String charBuff) {
