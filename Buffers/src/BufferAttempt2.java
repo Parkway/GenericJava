@@ -26,7 +26,7 @@ public class BufferAttempt2 {
                 CB.put(str);
                 //Grammatical prettiness. Just if else for different cases of space
                 if (CB.remaining() == 1) {
-                    str = JOptionPane.showInputDialog(CB.remaining() + " space remaining in buffer. Continue filling:");
+                    str = JOptionPane.showInputDialog("One space remaining in buffer. Continue filling:");
                 } else if (CB.remaining() == 0) {
                     JOptionPane.showMessageDialog(null,
                             "The buffer is now full.");
@@ -53,9 +53,20 @@ public class BufferAttempt2 {
         overflow(str, charBuff);
     }
     private static void overflow(String str, String charBuff) {
+        //Get length of string that crashed buffer
+        int strLen = str.length();
+        //Make new buffer that long
+        CharBuffer cB = CharBuffer.allocate(strLen);
+        //Put that string in the buffer
+        cB.put(str);
+        //Set indices to 0
+        cB.rewind();
+        //Save cb contents to string cBstr
+        String cBstr = cB.toString();
+        //display buffer before crash, string that caused crash, and length of crasher
         JOptionPane.showMessageDialog(null,
                 "Before overflowing, the buffer read \"" + charBuff +
-                "\"\nOverflow String: " + str + "\nTotal String Length: " +  str.length());
+                "\"\nOverflow String: " + cBstr + "\nTotal String Length: " + strLen);
         System.exit(13);
     }
     private static void fin(String charBuff) {
