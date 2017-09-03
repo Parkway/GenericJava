@@ -1,4 +1,7 @@
 import javax.swing.*;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 /***********************************************************************
  * Created by Lance Douglas on 8/31/2017
  ***********************************************************************/
@@ -12,6 +15,8 @@ public class ALE {
     }
         private static void math() {
             try {
+                NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
+
                 String liabilities = JOptionPane.showInputDialog("Please enter your total liabilities:");
                 String noComma = liabilities.replace(",", "");
                 String noDolla = noComma.replace("$", "");
@@ -30,18 +35,20 @@ public class ALE {
                 int WithVal = Integer.parseInt(With);
                 int RevVal = Integer.parseInt(Rev);
                 int ExpVal = Integer.parseInt(Exp);
-                int equity = ownVal + (capOwnVal - ownVal) + (WithVal + RevVal - ExpVal);
+                int equity = ownVal + (capOwnVal - ownVal) + (WithVal + (RevVal - ExpVal));
+
                 int correct = JOptionPane.showConfirmDialog(null,
-                        "Owner Value: " + ownVal + "\n" +
-                                "Capital Value: " + capOwnVal + "\n" +
-                                "Withdrawals: " + WithVal + "\n" +
-                                "Revenue: " + RevVal + "\n" +
-                                "Expenses: " + ExpVal + "\n" +
+                        "Owner Value: $" + ownVal + "\n" +
+                                "Capital Value: $" + capOwnVal + "\n" +
+                                "Withdrawals: $" + WithVal + "\n" +
+                                "Revenue: $" + RevVal + "\n" +
+                                "Expenses: $" + ExpVal + "\n" +
                                 "Is this correct?");
                 if (correct == JOptionPane.YES_OPTION) {
                     int assets = liabilint + equity;
+                    String assetFormat = numberFormat.format(assets);
                     JOptionPane.showMessageDialog(null,
-                            "Your total assets should be " + assets + ".");
+                            "Your total assets should be $" + assetFormat + ".");
                 } else {
                     JOptionPane.showMessageDialog(null,
                             "Let's try again. :)");
