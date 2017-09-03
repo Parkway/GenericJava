@@ -18,6 +18,9 @@ public class ALE {
                 NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US); //Allows for number formatting
 
                 String liabilities = JOptionPane.showInputDialog("Please enter your total liabilities:");
+                if (liabilities.equals("")) {
+                    math();
+                }
                 String noChars = liabilities.replace(",", "").replace("$","");
                 //Removes $ and , from inputted numbers, in case of annoying users.
                 int liabilint = Integer.parseInt(noChars); //Converts the above string to an integer.
@@ -56,8 +59,14 @@ public class ALE {
                 if (correct == JOptionPane.YES_OPTION) {
                     int assets = liabilint + equity;
                     String assetFormat = numberFormat.format(assets);
-                    JOptionPane.showMessageDialog(null,
-                            "Your total assets should be $" + assetFormat + ".");
+                    if (assets <= 0) {
+                        JOptionPane.showMessageDialog(null,
+                                "Your total assets should be $" + assetFormat + ".\n" +
+                                        "Oof, you boned.");
+                    } else {
+                        JOptionPane.showMessageDialog(null,
+                                "Your total assets should be $" + assetFormat + ".");
+                    }
 
                 //otherwise, try again.
                 } else {
