@@ -26,7 +26,7 @@ public class BufferAttempt2 {
                 CB.put(str);
                 //Grammatical prettiness. Just if else for different cases of space
                 if (CB.remaining() == 1) {
-                    str = JOptionPane.showInputDialog("One space remaining in buffer. Continue filling:");
+                    str = JOptionPane.showInputDialog("One space remaining in buffer. Be careful:");
                 } else if (CB.remaining() == 0) {
                     JOptionPane.showMessageDialog(null,
                             "The buffer is now full.");
