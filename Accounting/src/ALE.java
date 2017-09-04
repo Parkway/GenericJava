@@ -27,30 +27,28 @@ public class ALE {
 
                 //take all parts of equity formula as input and separate by commas
                 String equityParts = JOptionPane.showInputDialog(
-                        "Please enter your Owner value, Capital value, Withdrawals, Revenue, and Expenses,\n" +
-                                "separated by commas.\nDo not add dollar signs or commas to the numbers.");
+                        "Please enter your:\nOwner Investments, Owner Withdrawals,\n" +
+                                "Revenue, and Expenses,\n" +
+                                "all separated by commas.\nDo not add dollar signs or commas to the entered values.");
                 String[] parts = equityParts.split(", "); //Takes all input, then splits it by comma location.
-                String own = parts[0]; //First part of equity piece.
-                String capOwn = parts[1];
-                String With = parts[2];
-                String Rev = parts[3];
-                String Exp = parts[4]; //Last part.
+                String oInv = parts[0]; //First part of equity piece.
+                String oWith = parts[1];
+                String Rev = parts[2];
+                String Exp = parts[3]; //Last part.
 
                 //Converts each value to integer for calculations.
-                int ownVal = Integer.parseInt(own);
-                int capOwnVal = Integer.parseInt(capOwn);
-                int WithVal = Integer.parseInt(With);
+                int oIVal = Integer.parseInt(oInv);
+                int oWVal = Integer.parseInt(oWith);
                 int RevVal = Integer.parseInt(Rev);
                 int ExpVal = Integer.parseInt(Exp);
 
                 //Formulae (with an e at the end for fancy)
-                int equity = ownVal + (capOwnVal - ownVal) + (WithVal + (RevVal - ExpVal));
+                int equity = oIVal - oWVal + RevVal - ExpVal;
 
                 //Confirmation dialog
                 int correct = JOptionPane.showConfirmDialog(null,
-                        "Owner Value: $" + ownVal + "\n" +
-                                "Capital Value: $" + capOwnVal + "\n" +
-                                "Withdrawals: $" + WithVal + "\n" +
+                        "Owner Investments: $" + oIVal + "\n" +
+                                "Capital Withdrawals: $" + oWVal + "\n" +
                                 "Revenue: $" + RevVal + "\n" +
                                 "Expenses: $" + ExpVal + "\n" +
                                 "Is this correct?");
@@ -82,9 +80,18 @@ public class ALE {
                 math();
             } catch (ArrayIndexOutOfBoundsException AIOOBE) {
                 JOptionPane.showMessageDialog(null,
-                        "All five values must be entered, please try again.");
+                        "All four values must be entered, please try again.");
                 math();
             } catch (NullPointerException NPE) {
+                System.exit(66);
+            }
+            int again = JOptionPane.showConfirmDialog(null,
+                    "Would you like to calculate the equity again?");
+            if (again == JOptionPane.YES_OPTION) {
+                math();
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "Have a nice day.");
                 System.exit(66);
             }
         }
