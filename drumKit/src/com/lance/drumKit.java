@@ -8,7 +8,7 @@ class drumKit {
         String sentence = "A " + drumType + " makes a " + sound + " sound.";
         System.out.println(sentence);
     }
-    void playTopHat(String sound) {
+    void playHighHat(String sound    ) {
         String sentence = "A " + drumType + " makes a " + sound + " sound.";
         System.out.println(sentence);
     }
