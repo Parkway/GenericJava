@@ -19,8 +19,6 @@ public class Main {
         int dogCount = scn.nextInt();
         dog.setDogCount(dogCount);
 
-        cat.setCatCount(0);
-        dog.setDogCount(0);
-
     }
+
 }
