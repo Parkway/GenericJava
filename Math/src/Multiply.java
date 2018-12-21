@@ -5,7 +5,6 @@ import java.util.Scanner;
  ***************************************************/
 
 public class Multiply { //Class
-    Factorial facts = new Factorial(); //Calls factorial class for use in this class.
 
     public static void main(String[] args) { //main method
 

@@ -15,7 +15,7 @@ import javax.swing.*;
 public class Input {
     public static void main(String[] args) {
         String example1 = JOptionPane.showInputDialog(null,
-                "Message", "Default Text");
+                "Message", "What Would You Like To Make?");
         String example2 = JOptionPane.showInputDialog(null,
                 "Message", "Title", JOptionPane.PLAIN_MESSAGE);
 

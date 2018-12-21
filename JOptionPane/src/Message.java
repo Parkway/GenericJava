@@ -15,8 +15,12 @@ public class Message {
          * Title: Title of Pane
          * Magic Constant: Type of Pane
          */
+
+        String recipe = "Tomatoes: 1\n" +
+                "Dough: 15\n" +
+                "Cheese: One Pound.";
         JOptionPane.showMessageDialog(null,
-                "Message","Title", JOptionPane.PLAIN_MESSAGE);
+                recipe,"Recipe for Pizza", JOptionPane.PLAIN_MESSAGE);
 
         JOPSMD("Message","Title", JOptionPane.PLAIN_MESSAGE);
     }
