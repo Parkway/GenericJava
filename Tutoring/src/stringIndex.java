@@ -16,7 +16,7 @@ public class stringIndex {
         String input = scn.nextLine().toLowerCase();
         //Get length of input
         int inputLength = input.length();
-        System.out.print("Number(fewer than or equal to " + inputLength + "): ");
+        System.out.println("Please enter a number fewer than or equal to " + inputLength + ".");
         int num = scn.nextInt();
 
         //Try to do a thing

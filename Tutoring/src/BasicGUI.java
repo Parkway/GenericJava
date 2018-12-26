@@ -11,9 +11,9 @@ public class BasicGUI extends JFrame {
     //Instantiating GUI
     private BasicGUI() {
         //Title of GUI
-        super("GUI Title");
+        super("GUI Title Here");
         //Size of GUI
-        setSize(250,250);
+        setSize(350,150);
         //Adding Panel to GUI
         add(JP);
         //Adding Label to Panel

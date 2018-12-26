@@ -1,6 +1,7 @@
 /*****************************************
  * Created by Lance Douglas on 3/17/2017
  *****************************************/
+
 public class forLoop {
     public static void main(String[] args) {
         System.out.println("Rocket Launcher!");

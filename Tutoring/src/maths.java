@@ -13,10 +13,10 @@ public class maths {
         num1 = scn.nextDouble();
         num2 = scn.nextDouble();
 
-        /*  All sorts of math stuff here. sum is the two nums added,
-            product is numbers multiplied, etc etc.
-
-         */
+        /*
+        All sorts of math stuff here. sum is the two nums added,
+        product is numbers multiplied, etc etc.
+        */
         sum = num1+num2;
         product = num1*num2;
         dividend = num1/num2;

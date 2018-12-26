@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /***********************************************************************
  * Created by Lance Douglas on 4/30/2017
  *
@@ -7,16 +9,18 @@
 public class Comparative {
     public static void main(String[] args) {
 
-        String text = "Example";
-        int number = 45;
+        String greater = "This number is greater than 50.";
+        String lesser = "This number is less than 50.";
 
-        if (text.equals("Example")) {
-            System.out.println("The String \'text\' equals example");
-        }
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scn.nextInt();
 
-        if (number==45) {
-            System.out.println("The number is 45.");
-        }
+        //This is called a ternary operator.
+        String newNum = num >= 50 ? greater : lesser;
+
+        System.out.println(newNum);
+
 
     }
 }

@@ -1,7 +1,7 @@
-
 /*****************************************
  * Created by Lance Douglas on 3/17/2017
  *****************************************/
+
 public class whileLoop {
     public static void main(String[] args) {
         System.out.println("Rocket Launcher!");
