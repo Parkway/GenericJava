@@ -13,18 +13,19 @@ import java.io.*;
 class Student {
 
 
-    private String name;
+    private String name, gender;
     private int ID, age;
 
     // Setting string $out to that, which formats
     // and prints the student info when called.
 
-    /*
+    /**
     This method is called after each value has been entered
     in Main(), and takes the name String, and ID and age ints.
      */
-    void setInfo (String name,int ID, int age){
+    void setInfo (String name, String gender, int ID, int age) {
     this.name = name;
+    this.gender = gender;
     this.ID = ID;
     this.age = age;
     }
@@ -33,6 +34,9 @@ class Student {
     private String getName () {
         return this.name;
     }
+    private String getSex() {
+        return this.gender;
+    }
     private int getID () {
         return this.ID;
     }
@@ -40,7 +44,7 @@ class Student {
         return this.age;
     }
 
-    /*
+    /**
     The output method sets up the FileWriter for writing to output.txt
     The first two lines set up the file and printWriters, and the next
     two lines write the $out String to the file and console, respectively.
@@ -52,11 +56,14 @@ class Student {
             String out, write;
 
             out = "The following information has been recorded:" +
-                    "\nName: " + getName() + "\nID: " + getID() + "\nAge: " + getAge();
-            write = String.format("Name: " + getName() + " \n{ID: " + getID() + " \n{Age: " + getAge());
+                    "\nName: " + getName() + " \nGender: " + getSex() +
+                    " \nID: " + getID() + " \nAge: " + getAge();
+            write = String.format(
+                    "Name: " + getName() + " Gender: " + getSex() +
+                    " ID: " + getID() + " Age: " + getAge());
 
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
-            writer.write(write);
+            writer.append(write);
 
             System.out.println(out);
             writer.close();
