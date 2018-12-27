@@ -34,7 +34,7 @@ class Student {
     private String getName () {
         return this.name;
     }
-    private String getSex() {
+    private String getGender() {
         return this.gender;
     }
     private int getID () {
@@ -56,11 +56,10 @@ class Student {
             String out, write;
 
             out = "The following information has been recorded:" +
-                    "\nName: " + getName() + " \nGender: " + getSex() +
+                    "\nName: " + getName() + " \nGender: " + getGender() +
                     " \nID: " + getID() + " \nAge: " + getAge();
-            write = String.format(
-                    "Name: " + getName() + " Gender: " + getSex() +
-                    " ID: " + getID() + " Age: " + getAge());
+            write = "\nName: " + getName() + " \nGender: " + getGender() +
+                    " \nID: " + getID() + " \nAge: " + getAge();
 
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
             writer.append(write);
