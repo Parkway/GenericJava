@@ -1,7 +1,11 @@
 /**
- * This class is a demonstration of object oriented programming with Java
- * using arrays of both cats and dogs. It counts for three dogs and three
- * cats, each of which are assigned a name, age, and weight.
+ * @Version .3
+ * This class is a demonstration of object oriented programming with Java.
+ * So far, it works around three (3) pet types - dogs, cats, and rabbits.
+ * The user inputs each type of animal they have, as well as the names, ages,
+ * and weights of those pets. In the end, the input animals are returned to
+ * the user in an easily readable format. This program isn't so much about
+ * the actual "what it do," but more about the "how it do it."
  */
 
 package com.lance;
@@ -12,13 +16,22 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Declaring Strings and ints
+        //for the entirety of the program.
         String name;
         int age, weight,
         dogNum, catNum, bunNum,
         dogCount, catCount, bunCount;
 
+        //New scanner object scn
         Scanner scn = new Scanner(System.in);
 
+        /**
+         * This section simply prompts for the
+         * number of each type of pet, and
+         * adds each to the corresponding
+         * $putNum integer.
+         */
         print("How many dogs do you have?");
         dogNum = scn.nextInt();
         print("How many cats?");
@@ -26,17 +39,34 @@ public class Main {
         print("How many rabbits?");
         bunNum = scn.nextInt();
 
-        Animals [] dogs = new Animals[dogNum];
-        Animals [] cats = new Animals[catNum];
-        Animals [] buns = new Animals[bunNum];
-
-       /* dogNum = dogNum-1;
-        catNum = catNum-1;
-        bunNum = bunNum-1;*/
-
         dogCount = dogNum;
         catCount = catNum;
         bunCount = bunNum;
+
+        /**
+         * Assigning an array of objects to
+         * pet type. Currently, the whole issue
+         * of arrays starting at 0 is really
+         * dicking up the rest of my program.
+         *
+         * USER INPUT IN ARRAYS IS ALWAYS N-1
+         */
+
+        Animals [] dogs = new Animals[dogNum-1];
+        Animals [] cats = new Animals[catNum-1];
+        Animals [] buns = new Animals[bunNum-1];
+
+
+        print(dogNum + " " + catNum + " " + bunNum);
+
+        /**
+         * TODO unfuck this
+         * I think the issue is that i am declaring an array
+         * index(?) to the number of each animal type, but
+         * not for each total animal. This is to say that I
+         * am creating Dog[2] (third dog) but not Dog[0]
+         * and Dog[1]. While loop?
+         */
 
         dogs[dogNum-1] = new Animals();
         cats[catNum-1] = new Animals();
@@ -44,8 +74,8 @@ public class Main {
 
 
         try {
-            while (dogNum > 0) {
-                print("Dogs1: " + dogNum);
+            while (dogNum >= 0) {
+                print("Dogs: " + dogNum);
                 print("Dog's name:");
                 name = scn.next();
                 print("Dog's age:");
@@ -64,7 +94,7 @@ public class Main {
         }
 
         try {
-            while (catNum > 0) {
+            while (catNum >= 0) {
                 print("Cats: " + catNum);
                 print("Cat's name:");
                 name = scn.next();
@@ -84,7 +114,7 @@ public class Main {
         }
 
         try {
-            while (bunNum > 0) {
+            while (bunNum >= 0) {
                 print("Bunnies: " + bunNum);
                 print("Bun's name:");
                 name = scn.next();
@@ -127,10 +157,13 @@ public class Main {
             }
         } catch (InterruptedException IE) {
             //Nah
+        } catch (NullPointerException NPE) {
+            //Nah
         }
 
         try {
-            print("Cats:");
+            print("\nCats:");
+            print("Cat Count: " + catCount);
             while (catCount > 0) {
                 Thread.sleep(500);
                 String cat = cats[catCount-1].getName() + ", "
@@ -142,10 +175,13 @@ public class Main {
             }
         } catch (InterruptedException IE) {
             //Nah
+        } catch (NullPointerException NPE) {
+            //Do nothing
         }
 
         try {
             print("\nBunnies:");
+            print("Bunny Count: " + bunCount);
             while (bunCount > 0) {
                 Thread.sleep(500);
                 String bun = buns[bunCount-1].getName() + ", "
@@ -156,6 +192,8 @@ public class Main {
             }
         } catch (InterruptedException IE) {
             //Nah
+        } catch (NullPointerException NPE) {
+            //Oops
         }
     }
 
