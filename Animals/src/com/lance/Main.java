@@ -6,110 +6,160 @@
 
 package com.lance;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        /**
-         * I am declaring three new objects
-         * from the Animals class.
-         * Cats, dogs, and buns. Oh my!
-         */
-        Animals [] cats = new Animals[3];
-        Animals [] dogs = new Animals[3];
-        Animals [] buns = new Animals[2];
 
-        /**
-         * This is all about defining the first array
-         * entry, or in this case, cat 0. First we 
-         * declare each instance of cat() as an object,
-         * and then assign values via the setStuff methods.
-         * Cat 0 is a new cat, his name is Harold, he's two
-         * years old, and 9 pounds.
-         */
-        
-        cats[0] = new Animals();
-        cats[0].setName("Harold");
-        cats[0].setAge(2);
-        cats[0].setWeight(9);
+        String name;
+        int age, weight,
+        dogNum, catNum, bunNum,
+        dogCount, catCount, bunCount;
 
-        cats[1] = new Animals();
-        cats[1].setName("Jakob");
-        cats[1].setAge(7);
-        cats[1].setWeight(15);
+        Scanner scn = new Scanner(System.in);
 
-        cats[2] = new Animals();
-        cats[2].setName("Pete");
-        cats[2].setAge(9);
-        cats[2].setWeight(13);
+        print("How many dogs do you have?");
+        dogNum = scn.nextInt();
+        print("How many cats?");
+        catNum = scn.nextInt();
+        print("How many rabbits?");
+        bunNum = scn.nextInt();
 
-        //Same thing as above, but dogs now.
-        dogs[0] = new Animals();
-        dogs[0].setName("Fido");
-        dogs[0].setAge(14);
-        dogs[0].setWeight(85);
+        Animals [] dogs = new Animals[dogNum];
+        Animals [] cats = new Animals[catNum];
+        Animals [] buns = new Animals[bunNum];
 
-        dogs[1] = new Animals();
-        dogs[1].setName("Hitler");
-        dogs[1].setAge(2);
-        dogs[1].setWeight(140);
+       /* dogNum = dogNum-1;
+        catNum = catNum-1;
+        bunNum = bunNum-1;*/
 
-        dogs[2] = new Animals();
-        dogs[2].setName("Spot");
-        dogs[2].setAge(3);
-        dogs[2].setWeight(30);
+        dogCount = dogNum;
+        catCount = catNum;
+        bunCount = bunNum;
 
-        //Rabbits
-        buns[0] = new Animals();
-        buns[0].setName("Harvey");
-        buns[0].setAge(2);
-        buns[0].setWeight(3);
+        dogs[dogNum-1] = new Animals();
+        cats[catNum-1] = new Animals();
+        buns[bunNum-1] = new Animals();
 
-        buns[1] = new Animals();
-        buns[1].setName("Theodore");
-        buns[1].setAge(1);
-        buns[1].setWeight(4);
-        
-        /**
-         * These are for the following while and
-         * do while loops , respectively. The third
-         * is a for loop, which defines the value
-         * of the variable when the loop is
-         * instantiated. */
-        int catCount = 0;
-        int dogCount = 0;
-        int bunCount;
+
+        try {
+            while (dogNum > 0) {
+                print("Dogs1: " + dogNum);
+                print("Dog's name:");
+                name = scn.next();
+                print("Dog's age:");
+                age = scn.nextInt();
+                print("Dog's weight: ");
+                weight = scn.nextInt();
+
+                dogs[dogNum - 1].setName(name);
+                dogs[dogNum - 1].setAge(age);
+                dogs[dogNum - 1].setWeight(weight);
+
+                dogNum--;
+            }
+        } catch (NullPointerException NPE) {
+            NPE.getStackTrace();
+        }
+
+        try {
+            while (catNum > 0) {
+                print("Cats: " + catNum);
+                print("Cat's name:");
+                name = scn.next();
+                print("Cat's age:");
+                age = scn.nextInt();
+                print("Cat's weight:");
+                weight = scn.nextInt();
+
+                cats[catNum - 1].setName(name);
+                cats[catNum - 1].setAge(age);
+                cats[catNum - 1].setWeight(weight);
+
+                catNum--;
+            }
+        } catch (NullPointerException NPE) {
+            NPE.getStackTrace();
+        }
+
+        try {
+            while (bunNum > 0) {
+                print("Bunnies: " + bunNum);
+                print("Bun's name:");
+                name = scn.next();
+                print("Bun's age:");
+                age = scn.nextInt();
+                print("Bun's weight:");
+                weight = scn.nextInt();
+
+                buns[bunNum - 1].setName(name);
+                buns[bunNum - 1].setAge(age);
+                buns[bunNum - 1].setWeight(weight);
+
+                bunNum--;
+            }
+        } catch (NullPointerException NPE) {
+            NPE.getStackTrace();
+        }
+
+
+        print(dogNum + " " + dogCount);
+        print(catNum + " " + catCount);
+        print(bunNum + " " + bunCount);
 
         /**
          * These loops each take the animal value
          * and incorporate them into
          */
-        System.out.println("Cats:");
-        while (catCount < 3) {
-            String cat = cats[catCount].getName() + ", " + cats[catCount].getAge() + " years old, "
-                    + cats[catCount].getWeight() + " pounds.";
-            catCount++;
-            System.out.println(cat);
+
+
+        try {
+            print("\nDogs:");
+            print("Dog Count: " + dogCount);
+            while (dogCount > 0) {
+                Thread.sleep(500);
+                String dog = dogs[dogCount-1].getName() + ", "
+                    + dogs[dogCount-1].getAge() + " years old, "
+                    + dogs[dogCount-1].getWeight() + " pounds.";
+                print(dog);
+                dogCount--;
+            }
+        } catch (InterruptedException IE) {
+            //Nah
         }
 
-        System.out.println("\nDogs:");
-        do {
-            String dog = dogs[dogCount].getName() + ", " +
-                    dogs[dogCount].getAge() + " years old, " +
-                    dogs[dogCount].getWeight() + " pounds.";
+        try {
+            print("Cats:");
+            while (catCount > 0) {
+                Thread.sleep(500);
+                String cat = cats[catCount-1].getName() + ", "
+                    + cats[catCount-1].getAge() + " years old, "
+                    + cats[catCount-1].getWeight() + " pounds.";
+                print(cat);
+                catCount--;
 
-            System.out.println(dog);
-            dogCount++;
-
-        } while (dogCount < 3);
-
-        System.out.println("\nBunnies:");
-        for (bunCount = 0; bunCount < 2; bunCount++) {
-            String bun = buns[bunCount].getName() + ", " +
-                    buns[bunCount].getAge() + " years old, "
-                    + buns[bunCount].getWeight() + " pounds.";
-            System.out.println(bun);
-
+            }
+        } catch (InterruptedException IE) {
+            //Nah
         }
 
+        try {
+            print("\nBunnies:");
+            while (bunCount > 0) {
+                Thread.sleep(500);
+                String bun = buns[bunCount-1].getName() + ", "
+                    + buns[bunCount-1].getAge() + " years old, "
+                    + buns[bunCount-1].getWeight() + " pounds.";
+                print(bun);
+                bunCount--;
+            }
+        } catch (InterruptedException IE) {
+            //Nah
+        }
+    }
+
+    private static void print(String s) {
+        System.out.println(s); //2lazy4System.out.println
     }
 }
