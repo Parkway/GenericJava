@@ -1,5 +1,5 @@
 /**
- * @Version .8
+ * @Version .9
  * This class is a demonstration of object oriented programming with Java.
  * So far, it works around three (3) pet types - dogs, cats, and rabbits.
  * The user inputs each type of animal they have, as well as the names, ages,
@@ -27,11 +27,19 @@ public class Main {
         //New scanner object scn
         Scanner scn = new Scanner(System.in);
         ExceptionHandler EH = new ExceptionHandler();
+
         /**
          * This section simply prompts for the
          * number of each type of pet, and
          * adds each to the corresponding
-         * $putNum integer.
+         * $petNum integer.
+         *
+         * The entire selection is surrounded
+         * by a catch block because that's the
+         * only way I can think of handling an
+         * inputMismatch in this first section.
+         * Otherwise, variables get excluded
+         * and the whole thing just goes to hell.
          */
         try {
             print("How many dogs do you have?");
@@ -44,10 +52,7 @@ public class Main {
             if (dogNum == 0 &&
                 catNum == 0 &&
                 bunNum == 0) {
-                print("You have no pets.\n" +
-                        "This is a vet's office.\n" +
-                        "Go home.");
-                System.exit(1000);
+                EH.noPets();
             }
 
             dogCount = dogNum;
@@ -195,6 +200,10 @@ public class Main {
         } catch (InputMismatchException IME) {
             EH.inputMismatch();
         }
+
+        //Exit Code 999 = Program Executed Succesfully
+        System.exit(999);
+
     }
 
     /**

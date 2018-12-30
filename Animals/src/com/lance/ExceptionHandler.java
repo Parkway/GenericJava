@@ -8,20 +8,31 @@
  * a fault in the program much easier, as each issue
  * has a unique identifying number.
  *
- * inputMismatch = 50;
+ * inputMismatch = 9;
  * nullPointer = 99;
  * arrayOOB = 199;
+ * noPets = 299
  ***********************************************************************/
 package com.lance;
 
 
+/**
+ * Most of these should not happen. Many of them
+ * do not contain any handling because simply
+ * acknowledging that the exception occurred is
+ * apparently good enough.
+ *
+ */
 public class ExceptionHandler {
     void inputMismatch() {
-        System.out.println("You have entered a non-numeric value.\n" +
+        //Turns out, simply having it caught fixes it.
+        //I guess.
+
+        /*System.out.println("You have entered a non-numeric value.\n" +
         "This field requires an integer between\n" +
         "-2147483648 and 2147483647.\n" +
         "Please try again.");
-        System.exit(50);
+        System.exit(9);*/
     }
     void nullPointer() {
         System.out.println("Whatever you did caused a \n" +
@@ -30,10 +41,13 @@ public class ExceptionHandler {
         System.exit(99);
     }
     void arrayOOB() {
-        System.out.println("The values you have entered are\n" +
-        "outside of the allowed index.\n" +
-        "Please try again.");
-        System.exit(199);
+        //Do nothing.
+    }
+    void noPets() {
+        System.out.println("You have no pets.\n" +
+                "This is a vet's office.\n" +
+                "Go home.");
+        System.exit(299);
     }
 }
 
