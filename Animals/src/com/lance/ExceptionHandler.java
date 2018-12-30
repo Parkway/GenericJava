@@ -25,14 +25,11 @@ package com.lance;
  */
 public class ExceptionHandler {
     void inputMismatch() {
-        //Turns out, simply having it caught fixes it.
-        //I guess.
-
-        /*System.out.println("You have entered a non-numeric value.\n" +
+        System.out.println("You have entered a non-numeric value.\n" +
         "This field requires an integer between\n" +
         "-2147483648 and 2147483647.\n" +
         "Please try again.");
-        System.exit(9);*/
+        System.exit(9);
     }
     void nullPointer() {
         System.out.println("Whatever you did caused a \n" +
