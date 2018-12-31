@@ -1,5 +1,5 @@
 /**
- * @Version 1.0
+ * @Version 1.1
  * This class is a demonstration of object oriented programming with Java.
  * So far, it works around three (3) pet types - dogs, cats, and rabbits.
  * The user inputs each type of animal they have, as well as the names, ages,
@@ -112,6 +112,7 @@ public class Main {
                     print("Dogs: " + dogNum);
                     print("Dog's name:");
                     name = scn.next();
+                    scn.nextLine();
                     print("Dog's age:");
                     age = scn.nextInt();
                     print("Dog's weight: ");
@@ -146,12 +147,14 @@ public class Main {
 
             //Same as above, but now with the cats.
 
+
             try {
                 while (catNum > 0) {
                     cats[catNum - 1] = new Animals();
                     print("Cats: " + catNum);
                     print("Cat's name:");
                     name = scn.next();
+                    scn.nextLine();
                     print("Cat's age:");
                     age = scn.nextInt();
                     print("Cat's weight:");
@@ -176,6 +179,7 @@ public class Main {
                     print("Bunnies: " + bunNum);
                     print("Bun's name:");
                     name = scn.next();
+                    scn.nextLine();
                     print("Bun's age:");
                     age = scn.nextInt();
                     print("Bun's weight:");
@@ -195,7 +199,7 @@ public class Main {
             /**
              * This here bad boy is for if the user
              * tries to enter letters instead of
-             * numbers in integer inputs.
+             * numbers in an integer input.
              */
             } catch (InputMismatchException IME) {
                 EH.inputMismatch();
@@ -210,8 +214,7 @@ public class Main {
              */
             try {
                 print("\nDogs:");
-                print("Number of dogs: " + dogCount);
-
+//Don't want    print("Number of dogs: " + dogCount);
                 //In case user has no puppers.
                 if (dogCount == 0) {
                     print("User has no dogs.");
@@ -235,7 +238,7 @@ public class Main {
             //Same as above, but with cats.
             try {
                 print("\nCats:");
-                print("Number of cats: " + catCount);
+//                print("Number of cats: " + catCount);
                 if (catCount == 0) {
                     print("User has no cats.");
                 }
@@ -255,7 +258,7 @@ public class Main {
             //Same shit, different animal.
             try {
                 print("\nBunnies:");
-                print("Number of rabbits: " + bunCount);
+//                print("Number of rabbits: " + bunCount);
                 if (bunCount == 0) {
                     print("User has no rabbits.");
                 }
@@ -285,7 +288,11 @@ public class Main {
      * This is just a handy little method to
      * use "print" instead of "System.out.println"
      * every darn time. It might be bad practice,
-     * but it's so helpful.
+     * but it's so helpful. It only accepts strings,
+     * but an easy work around for integer data
+     * types is to add a space.
+     * Example:
+     * print(int + " ");
      */
     private static void print(String s) {
         System.out.println(s);

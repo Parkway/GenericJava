@@ -27,7 +27,7 @@ public class ExceptionHandler {
     void inputMismatch() {
         System.out.println("You have entered a non-numeric value.\n" +
         "This field requires an integer between\n" +
-        "-2147483648 and 2147483647.\n" +
+        "-2147483648 and 2147483647.\n\n" +
         "Please try again.");
         System.exit(9);
     }
@@ -41,6 +41,12 @@ public class ExceptionHandler {
         //Do nothing.
     }
     void noPets() {
+        /*
+        This technically isn't an exception,
+        but it is a little thing I wanted to
+        include, and this seemed like as good
+        a place as any.
+        */
         System.out.println("You have no pets.\n" +
                 "This is a vet's office.\n" +
                 "Go home.");
