@@ -3,7 +3,7 @@ package com.lance;
 /******************************************
  * Created by Lance Douglas on 12/31/2018
  ******************************************/
-public class CoffeeCup {
+class CoffeeCup {
 
     //Initialize empty variable
     //for the coffeeCup.
@@ -25,7 +25,7 @@ public class CoffeeCup {
             if (cupEmpty == 0) {
                 System.out.println(
                         "Cup is empty, refreshing...");
-                cupEmpty = 2;
+                cupEmpty = 1;
                 return true;
             } else {
                 return false;

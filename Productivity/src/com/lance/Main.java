@@ -16,9 +16,6 @@ public class Main {
          * Creating each object: coffeeCup,
          * workTask, and coffeePot.
          */
-        CoffeeCup coffeeCup = new CoffeeCup();
-        WorkTask workTask = new WorkTask();
-        CoffeePot coffeePot = new CoffeePot();
 
         /**
          * While workTask.Done is false,
@@ -33,6 +30,9 @@ public class Main {
          *
          * Again, do this until the task is done.
          */
+        CoffeeCup coffeeCup = new CoffeeCup();
+        WorkTask workTask = new WorkTask();
+        CoffeePot coffeePot = new CoffeePot();
         do {
             coffeeCup.Drink(); //Slurp
             workTask.Execute(); //Working

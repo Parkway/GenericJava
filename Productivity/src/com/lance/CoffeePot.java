@@ -3,7 +3,7 @@ package com.lance;
 /******************************************
  * Created by Lance Douglas on 12/31/2018
  ******************************************/
-public class CoffeePot {
+class CoffeePot {
 
     //Initialize empty variable
     //for the coffeePot

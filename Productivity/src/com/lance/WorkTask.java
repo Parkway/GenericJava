@@ -3,10 +3,10 @@ package com.lance;
 /******************************************
  * Created by Lance Douglas on 12/31/2018
  ******************************************/
-public class WorkTask {
+class WorkTask {
 
     //Amount of loops for work to take.
-    int totalRuns = 10;
+    int totalRuns = 3;
 
     //"Working on workTask."
     void Execute() {
@@ -24,7 +24,10 @@ public class WorkTask {
                     "Give yourself the reward you deserve\n" +
                     "with a nice post-coffee shit."
                 );
-                //Return workTask = true;
+                /*
+                Return workTask = true;
+                while (!workTask.Done(true));
+                 */
                 return true;
             } else {
                 //If not done, return workTask = false;
