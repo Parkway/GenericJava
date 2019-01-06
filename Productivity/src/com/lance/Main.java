@@ -30,9 +30,11 @@ public class Main {
          *
          * Again, do this until the task is done.
          */
+
         CoffeeCup coffeeCup = new CoffeeCup();
         WorkTask workTask = new WorkTask();
         CoffeePot coffeePot = new CoffeePot();
+
         do {
             coffeeCup.Drink(); //Slurp
             workTask.Execute(); //Working
