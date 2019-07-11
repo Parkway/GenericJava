@@ -1,5 +1,3 @@
-import jdk.internal.util.xml.impl.Input;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,7 +13,7 @@ public class OddEven {
         System.out.println("Enter a number:");
         try {
             int num = scn.nextInt();
-            //If the number can has a remainder of 0, is even.
+            //If the number has a remainder of 0, is even.
             if (num % 2 == 0) {
                 System.out.println("Number is even.");
 

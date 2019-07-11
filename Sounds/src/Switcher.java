@@ -3,8 +3,8 @@
  *****************************************/
 class Switcher {
     String choice(String animalChoice) {
-        Sound sound = new Sound();
-
+        /*Sound sound = new Sound();
+        
         switch (animalChoice) {
             case "cow" : return sound.getCowSound();
             case "chicken" : return sound.getChickenSound();
@@ -12,6 +12,6 @@ class Switcher {
             case "dog" : return sound.getDogSound();
             case "cat" : return sound.getCatSound();
             default : return sound.none();
-        }
+        */}
     }
 }

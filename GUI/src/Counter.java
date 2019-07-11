@@ -104,5 +104,4 @@ public class Counter extends JFrame {
     public static void main(String[] args) {
         Counter GUI = new Counter();
     }
-
 }

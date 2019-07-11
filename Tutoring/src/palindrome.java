@@ -17,7 +17,7 @@ public class palindrome {
         String reversedPhrase = new StringBuffer(phrase).reverse().toString();
         //If original.equals(reverse), than its a palindrome
         if (phrase.equals(reversedPhrase)) {
-            System.out.println("Congrats, " + phrase + " is a palindrome!");
+            System.out.println("Congrats, \"" + phrase + "\" is a palindrome!");
         //Else it isn't
         } else {
             System.out.println("Unfortunately, \"" + phrase + "\" is not a palindrome.");
