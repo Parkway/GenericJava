@@ -3,10 +3,17 @@
  *****************************************/
 public class DelayThreadExecution {
     public static void main (String[] main) throws InterruptedException {
-        for (int i = 100; i > 0; i--) {
-            System.out.println(i);
+        for (int i = 30; i > 0; i--) {
+            System.out.println("Tick");
+            Thread.sleep(1000);
+            System.out.println("Tock");
             Thread.sleep(1000);
         }
-        System.out.println("Zero!");
+        System.out.println("...");
+        Thread.sleep(5000);
+        System.out.println("Did you really just watch this for an entire minute" +
+                "" +
+                "?" +
+                "\nGet a life, dude.");
     }
 }

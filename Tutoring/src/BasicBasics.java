@@ -14,17 +14,23 @@ public class BasicBasics {
         dataType $name; which says
         "There is now a data type called
         $name.
+
+        String textExample = "Example text";
+        int numExample = 8;
         */
 
         //Declaring a String
         String text = "Text must be within double quotation marks.";
+
         //Char
         char grade = 'A'; //Must be in single quotes.
 
         //Declaring an integer value
         int num = 1000; //Range from -2,141,000,000 to 2,141,000,000
+
         //double
         double doubleNum = 25.234; //numbers with decimals
+
         //long
         long bigNum = 99999999999999999L; //designated by L
 
